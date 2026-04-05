@@ -18,7 +18,6 @@
 # ===============================================================================
 
 # PYTHON IMPORTS
-from __future__ import print_function
 from base64 import b64encode
 from requests import get
 from urllib.parse import quote
@@ -358,13 +357,9 @@ def newnigma2KeyGo(self):
 		# when a timer end is set before the start, add 1 day
 		if end < begin:
 			end += 86400
-		if PY2:
-			rt_name = quote(self.timerentry_name.value.decode('utf8').encode('utf8', 'ignore'))
-			rt_description = quote(self.timerentry_description.value.decode('utf8').encode('utf8', 'ignore'))
-		else:
-			rt_name = quote(self.timerName.value.encode('utf8', 'ignore'))
-			rt_description = self.timerDescription.value if self.timerDescription.default != self.timerDescription.value else self.timer.description
-			rt_description = quote(rt_description.encode('utf8', 'ignore'))
+		rt_name = quote(self.timerName.value.encode('utf8', 'ignore'))
+		rt_description = self.timerDescription.value if self.timerDescription.default != self.timerDescription.value else self.timer.description
+		rt_description = quote(rt_description.encode('utf8', 'ignore'))
 		rt_disabled = 0  # XXX: do we really want to hardcode this? why do we offer this option then?
 		rt_repeated = 0  # XXX: same here
 		if config.plugins.remoteTimer.remotedir.value:
