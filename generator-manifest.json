@@ -1,0 +1,19 @@
+{
+  "branch": "main",
+  "depends_recipe": "",
+  "description_control": "add Timer remote on a another Dreambox with Enigma2",
+  "description_recipe": "add Timer remote on a another Dreambox with Enigma2",
+  "history_source_dir": "remotetimer2",
+  "internal_package_name": "enigma2-plugin-extensions-remotetimer",
+  "module_dir_name": "remoteTimer",
+  "output_subdir": "remotetimer",
+  "package_name": "enigma2-plugin-extensions-remotetimer",
+  "plugin_src_rel": "remotetimer",
+  "python_package": "remoteTimer",
+  "rdepends_recipe": "",
+  "replaces": "",
+  "repo_name": "remoteTimer",
+  "rrecommends": "",
+  "rreplaces": "",
+  "selected_from_plugin_list": true
+}
